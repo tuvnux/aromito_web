@@ -1,0 +1,30 @@
+.navegacion{
+    display: flex;
+    height: 200px;
+    background-color: bisque;
+    justify-content: space-around;
+}   
+
+.titulo-principal{
+    font-family: 'Rustyne', serif;
+    text-align: center;
+    color: #333;
+    font-size: 6.5em;
+    margin-top: 20px;
+}
+
+@font-face {
+    font-family: 'Rustyne';
+    src: url(fonts/Rustyne.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.presentacion {
+    max-width: 1000px;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    margin: 0 auto;
+}
