@@ -1,17 +1,44 @@
 .navegacion{
-    display: flex;
-    height: 200px;
-    background-color: bisque;
-    justify-content: space-around;
+    display: flex ;
+    justify-content: center;
+    list-style: none;
+    padding: 0;              /* quita relleno por defecto */
+    gap: 100px;
+    margin: 0;               /* quita margen por defecto */
+    font-size: 35px;
 }   
+ul {
+  list-style: none;   /* elimina los puntos */
+  padding: 0;         /* quita el sangrado izquierdo */
+  margin: 0;          /* opcional: ajusta el margen */
+}
+
+.box-titulo {
+  width: 100%;
+  height: 400px;              /* podés agrandar el alto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("imges/Screenshot 2025-08-30 210415.png");
+  background-size: cover;     /* la imagen cubre toda la caja */
+  background-position: center;/* centrada */
+  background-repeat: no-repeat;
+  
+
+}
+
+
 
 .titulo-principal{
     font-family: 'Rustyne', serif;
     text-align: center;
-    color: #333;
+    color: #fafafa;
     font-size: 6.5em;
     margin-top: 20px;
 }
+
+
 
 @font-face {
     font-family: 'Rustyne';
@@ -21,10 +48,15 @@
 }
 
 .presentacion {
-    max-width: 1000px;
-    display: inline-block;
+    max-width: 100%;
+    display: block;
     text-align: center;
     font-size: 1.5em;
-    color: #333;
+    color: #ffffff;
     margin: 0 auto;
+    line-height: 0.7;
+    background-image: url("imges/hans-m9h_7B6RBiM-unsplash.jpg");
+    background-size: cover;
+    background-position: center;/* centrada */
+    background-repeat: no-repeat;
 }
