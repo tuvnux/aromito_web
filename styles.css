@@ -20,7 +20,7 @@ ul {
   justify-content: center;
   align-items: center;
 
-  background-image: url("imges/Screenshot 2025-08-30 210415.png");
+  background-image: url("aca va imagen de fondo");
   background-size: cover;     /* la imagen cubre toda la caja */
   background-position: center;/* centrada */
   background-repeat: no-repeat;
@@ -28,35 +28,77 @@ ul {
 
 }
 
+body {
+   margin: 0;
+  min-height: 100vh;
 
+  background: 
+    url("imges/buried.png") repeat, /* textura encima */
+    linear-gradient(
+      180deg,
+      #e0be9c 0%,   /* marrón más claro arriba */
+      #64523e 100%  /* marrón original abajo */
+    ); /* gradiente debajo */
 
-.titulo-principal{
-    font-family: 'Rustyne', serif;
-    text-align: center;
-    color: #fafafa;
-    font-size: 6.5em;
-    margin-top: 20px;
+  background-size: 200px 200px, cover; 
+  /* la textura se repite cada 200px, el gradiente ocupa toda la pantalla */
+
+  color: #f4f0ea; /* texto claro para contraste */
+}
+
+.titulo-logo {
+    max-width: 30%;
+    height: auto;
 }
 
 
 
 @font-face {
-    font-family: 'Rustyne';
-    src: url(fonts/Rustyne.otf) format('opentype');
+    font-family: 'mikea';
+    src: url(fonts/Raleway-VariableFont_wght.ttf) format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 .presentacion {
-    max-width: 100%;
+  font-family: "mikea";
+    max-width: 60%;
     display: block;
     text-align: center;
-    font-size: 1.5em;
-    color: #ffffff;
+    font-size: 1em;
+    color: #000000;
     margin: 0 auto;
-    line-height: 0.7;
-    background-image: url("imges/hans-m9h_7B6RBiM-unsplash.jpg");
+    line-height: 1.4;
+    background-image: url("image");
     background-size: cover;
     background-position: center;/* centrada */
     background-repeat: no-repeat;
+}
+
+.texto-destacado {
+  background: rgba(65, 53, 41, 0.6); /* marrón oscuro con transparencia */
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  color: #e2d1b7;
+}
+
+.centrado {
+ max-width: 900px;
+  margin: 2rem auto;     /* arriba/abajo 2rem, izquierda/derecha auto */
+  padding: 0 1rem;       /* respirito lateral */
+  text-align: center;    /* opcional para centrar texto/links */
+}
+
+
+.colecciones{
+  font-size: 2em;
+}
+
+.lista-colecciones{
+  list-style: none;   /* elimina los puntos */
+  padding: 0;         /* quita el sangrado izquierdo */
+  margin: 0;          /* opcional: ajusta el margen */
+  font-size: 2em;
 }
