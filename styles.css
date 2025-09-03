@@ -20,7 +20,7 @@ ul {
   justify-content: center;
   align-items: center;
 
-  background-image: url("aca va imagen de fondo");
+  background-image: url("aca va la imagen de fondo");
   background-size: cover;     /* la imagen cubre toda la caja */
   background-position: center;/* centrada */
   background-repeat: no-repeat;
@@ -120,7 +120,8 @@ body {
   width: min(1100px, 92vw);
   margin: 2rem auto 4rem;
   display: grid;
-  gap: 32px;
+  grid-template-columns: 1fr;  /* 1 columna por defecto */
+   gap: clamp(24px, 4vw, 56px);  /* espacio entre fichas */
 }
 
 /* ---- FICHA ---- */
@@ -133,6 +134,7 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,.25);
   backdrop-filter: blur(2px);
   color: var(--muted);
+  margin-bottom: 100px; /* espacio extra abajo para la franja para los otros productos, dios mio me costó un huevo darme cuenta */
 }
 .ficha--reverse{ grid-template-columns: 1fr 1.15fr; }
 @media (max-width: 900px){
@@ -146,16 +148,17 @@ body {
 }
 .ficha__precios{
   position: absolute; top: 20px; left: 20px;
-  background: rgba(255,255,255,.08);
+  background: rgba(0, 0, 0, 0.281);
   border: 1px solid var(--borde-suave);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 10px 14px;
   backdrop-filter: blur(4px);
+  font-size: 1.2rem;
 }
 .ficha__precios ul{ list-style: none; margin: 0; padding: 0; }
 .ficha__precios li{
   display: flex; justify-content: space-between; gap: 16px;
-  font-weight: 600; letter-spacing: .02em; color: var(--muted);
+  font-weight: 600; letter-spacing: .01em; color: var(--muted);
 }
 .ficha__precios li + li{ margin-top: 6px; }
 .ficha__precios strong{ color: var(--text); }
