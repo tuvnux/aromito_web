@@ -1,3 +1,4 @@
--ver manera de cambiar de color en ficha flotante de precios por fotos que se ven mas claras. 
+-ver manera de cambiar de color en ficha flotante de precios por fotos que se ven mas claras. /HECHO/
 -ver opción de poner mas de una foto, "dar siguiente" y que muestre otra foto. 
--separar artículos, se chocan los productos. 
+-separar artículos, se chocan los productos. /HECHO/
+-

@@ -9,6 +9,12 @@
     
 }   
 
+li{
+    font-family: "eagle lake", sans-serif;
+    font-weight: 600;
+    color: #f4f0ea;
+}
+
 header{
   position: sticky; top: 0;
   background: var(--bg-nav);
@@ -76,14 +82,30 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 1));
 
-  background-image: url("aca va la imagen de fondo");
+  background-image: url("imges/fotosbelen/aromitosbienal_1.jpg");
   background-size: cover;     /* la imagen cubre toda la caja */
-  background-position: center;/* centrada */
+  background-position: left;/* centrada */
   background-repeat: no-repeat;
   
 
 }
+
+.box-titulo {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: aparecer 1s ease-out forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 body {
    margin: 0;
@@ -142,21 +164,26 @@ body {
   background-image: url("imges/Screenshot 2025-09-04 031728.png");
   background-size: cover;
   background-position: center;  
-  position: relative; /* para el pseudo-elemento */
-  overflow: hidden;   /* recorta el blur que se salga */
+  position: relative; 
+  overflow: hidden; 
+  backdrop-filter: blur(1.5px); /* desenfoque del fondo */
 }
 
-
-
-/* pseudo-elemento para el fondo */
 .texto-destacado::before {
   content: "";
   position: absolute;
-  inset: 0; /* ocupa todo el bloque */
-  background: url("images/Screenshot-2025-09-04-031728.png") center/cover no-repeat;
-  filter: blur(8px); /* <- blur de la imagen */
-  z-index: -1; /* detrás del texto */
+  inset: 0; /* ocupa todo el contenedor */
+  backdrop-filter: blur(2px); /* desenfoque del fondo */
+  background: rgba(0, 0, 0, 0.1); /* negro con 50% de transparencia */
+  z-index: 0;
 }
+
+.texto-destacado p {
+  position: relative;
+  z-index: 1; /* asegura que el texto quede arriba del overlay */
+}
+
+
 
 .centrado {
  max-width: 900px;
@@ -177,10 +204,28 @@ body {
 .arcilla-texto{
   font-size: 1rem;
   font-family: "mikea";
+  display: block;
+  text-align: center;
 }
 
 .colecciones{
   font-size: 2em;
+}
+
+h2{
+  font-family: "Eagle lake";
+}
+.colecciones {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: aparecer 1s ease-out forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .lista-colecciones{
@@ -261,7 +306,7 @@ font-size: 1rem;}
   font-family: "Cormorant Garamond", serif;  /* o tu serif elegida */
   color: var(--text);
   font-weight: 600;
-  font-size: clamp(1.1rem, 1rem + .9vw, 1.7rem);
+  font-size: clamp(1.1rem, 0.1rem + .9vw, 1.7rem);
   letter-spacing: .04em;
   text-transform: uppercase;
   margin: 2px 0 12px;
@@ -270,6 +315,7 @@ font-size: 1rem;}
 /* ---- Checklist con check “✓” ---- */
 .ficha__checklist{ list-style: none; padding: 0; margin: 12px 0; }
 .ficha__checklist li{
+  font-family: "Plus Jakarta Sans", sans-serif;  /* ACA SE CAMBIA LA TIPOGRAFIA */
   position: relative; padding-left: 24px; margin: 7px 0;
 }
 .ficha__checklist li::before{
@@ -287,20 +333,25 @@ font-size: 1rem;}
   background: rgba(255,255,255,.08);
   border-top: 1px solid var(--borde-suave);
   padding: 14px 18px;
-  display: grid; gap: 14px;
+  display: grid; gap: 20px;
 }
 @media (min-width: 700px){
-  .ficha__franja{ grid-template-columns: 1fr 1fr; align-items: start; }
+  .ficha__franja{ grid-template-columns: 5fr 1fr; align-items: start;
+   }
 }
 
 .ficha__paleta ul{
-  list-style: none; margin: 6px 0 0; padding: 0;
-  display: flex; flex-wrap: wrap; gap: 12px 16px;
+  list-style: none; 
+  margin: 6px 0 0; 
+  padding: 0;
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 12px 16px;
 }
 .ficha__paleta li{
-  --size: 26px;
+  --size: 16px;
   position: relative; padding-left: calc(var(--size) + 10px);
-  color: var(--muted); font-size: .95rem;
+  color: var(--muted); font-size: .4rem;
 }
 .ficha__paleta li::before{
   content: ""; position: absolute; left: 0; top: 50%;
@@ -310,6 +361,6 @@ font-size: 1rem;}
 }
 .ficha__label{
   display: inline-block; color: var(--text);
-  font-size: .85rem; letter-spacing: .08em; text-transform: uppercase;
+  font-size: .70rem; letter-spacing: .08em; text-transform: uppercase;
   opacity: .9;
 }
