@@ -5,15 +5,19 @@
     padding: 0;              /* quita relleno por defecto */
     gap: 100px;
     margin: 0 ;               /* quita margen por defecto */
-    font-size: 20px;
+    font-size: 18px;
+    
     
 }   
 
 li{
-    font-family: "eagle lake", sans-serif;
+    font-family: "mikea", sans-serif;
     font-weight: 600;
-    color: #f4f0ea;
+    color: #ffffff;
+    
 }
+
+
 
 header{
   position: sticky; top: 0;
@@ -22,15 +26,18 @@ header{
   border-bottom: 1px solid var(--bd-nav);
   z-index: 50;
 
-  max-width: 1500px;
+  max-width: auto;
   margin: 0 auto;
-  border-radius: 20px
+  border-radius: 2px
 }
 
 header{
   margin-top: 10px;      /* baja el header un poco */
   margin-bottom: 20px;   /* deja espacio con el resto */
+  margin-top: 0; margin-bottom: 0; 
 }
+
+
 
 .navegacion{
   display: flex; list-style: none;
@@ -57,9 +64,7 @@ header{
 }
 .navegacion a:hover::after{ transform: scaleX(1); }
 
-/* link activo (página actual) */
-.navegacion a[aria-current="page"]{ color: var(--acento); }
-.navegacion a[aria-current="page"]::after{ transform: scaleX(1); }
+
 
 /* responsive */
 @media (max-width:680px){
@@ -78,13 +83,14 @@ ul {
 
 .box-titulo {
   width: 100%;
-  height: 400px;              /* podés agrandar el alto */
+  height: 500px;              /* podés agrandar el alto */
   display: flex;
   justify-content: center;
   align-items: center;
-   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 1));
 
-  background-image: url("imges/fotosbelen/aromitosbienal_1.jpg");
+   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.6));
+
+  background-image: url("imges/fotosbelen/aromitosbienal_12.jpg-");
   background-size: cover;     /* la imagen cubre toda la caja */
   background-position: left;/* centrada */
   background-repeat: no-repeat;
@@ -96,6 +102,7 @@ ul {
   opacity: 0;
   transform: translateY(-20px);
   animation: aparecer 1s ease-out forwards;
+  
 }
 
 @keyframes aparecer {
@@ -108,10 +115,12 @@ ul {
 
 
 body {
-   margin: 0;
+  margin: 0;
+  padding:0;
   min-height: 100vh;
   font-family: "mikea", sans-serif;
   font-size: 1;
+  
 
   background: 
     url("imges/buried.png") repeat, /* textura encima */
@@ -128,8 +137,10 @@ body {
 }
 
 .titulo-logo {
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
+   
+
 }
 
 
@@ -161,7 +172,7 @@ body {
   margin: 2rem auto;
   color: #e2d1b7;
 
-  background-image: url("imges/Screenshot 2025-09-04 031728.png");
+  background-image: url("aca puede ir otra foto de arcilla.jpg");
   background-size: cover;
   background-position: center;  
   position: relative; 
@@ -173,7 +184,6 @@ body {
   content: "";
   position: absolute;
   inset: 0; /* ocupa todo el contenedor */
-  backdrop-filter: blur(2px); /* desenfoque del fondo */
   background: rgba(0, 0, 0, 0.1); /* negro con 50% de transparencia */
   z-index: 0;
 }
@@ -183,7 +193,9 @@ body {
   z-index: 1; /* asegura que el texto quede arriba del overlay */
 }
 
-
+.hacemos-realidad{
+  font-size: 1.3rem;
+}
 
 .centrado {
  max-width: 900px;
@@ -194,7 +206,7 @@ body {
 
 .arcilla {
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: .04em;
   font-family: "mikea";
@@ -206,14 +218,22 @@ body {
   font-family: "mikea";
   display: block;
   text-align: center;
+  width: auto;
 }
 
 .colecciones{
   font-size: 2em;
+  margin-bottom: 120px
+  
+  
 }
 
 h2{
-  font-family: "Eagle lake";
+  
+  font-family: "mikea";
+  color: #3f3326;
+font-style: initial;  
+
 }
 .colecciones {
   opacity: 0;
@@ -240,9 +260,9 @@ h2{
   --text: #f4f0ea;
   --muted: #e7dfd2;
   --card-bg: rgba(40,30,20,.55);
-  --card-br: 16px;
+  --card-br: 10px;
   --borde-suave: rgba(255,255,255,.18);
-  --acento: #d3b892; /* check y labels */
+  --acento: #d3b892; /* check y labels (eliminado) */
 
     /* nuevas para el header/nav */
   --bg-nav: rgba(40,30,20,.35);     /* fondo del header (vidrio) */
@@ -283,13 +303,13 @@ h2{
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
 .ficha__precios{
-  position: absolute; top: 20px; left: 20px;
+  position: absolute; top: 20px; left: 10px;
   background: rgba(0, 0, 0, 0.281);
-  border: 1px solid var(--borde-suave);
-  border-radius: 8px;
+  border: 2px solid var(--borde-suave);
+  border-radius: 1px;
   padding: 10px 14px;
   backdrop-filter: blur(4px);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .ficha__precios ul{ list-style: none; margin: 0; padding: 0; }
 .ficha__precios li{
@@ -297,70 +317,89 @@ h2{
   font-weight: 600; letter-spacing: .01em; color: var(--muted);
 }
 .ficha__precios li + li{ margin-top: 6px; }
-.ficha__precios strong{ color: var(--text); }
+.ficha__precios { color: var(--text); }
 
 /* ---- Columna de info ---- */
 .ficha__info{ padding: 26px 28px 0; 
-font-size: 1rem;}
+font-size: 0.9rem;}
 .ficha__titulo{
-  font-family: "Cormorant Garamond", serif;  /* o tu serif elegida */
+  font-family: "MIKEA", serif;  /* o tu serif elegida */
   color: var(--text);
-  font-weight: 600;
+  font-weight: 61;
   font-size: clamp(1.1rem, 0.1rem + .9vw, 1.7rem);
   letter-spacing: .04em;
   text-transform: uppercase;
-  margin: 2px 0 12px;
+  margin: top 0 12px;
 }
 
-/* ---- Checklist con check “✓” ---- */
-.ficha__checklist{ list-style: none; padding: 0; margin: 12px 0; }
-.ficha__checklist li{
-  font-family: "Plus Jakarta Sans", sans-serif;  /* ACA SE CAMBIA LA TIPOGRAFIA */
-  position: relative; padding-left: 24px; margin: 7px 0;
+
+
+
+
+
+.ficha-check{
+  margin: 20px 0;
 }
-.ficha__checklist li::before{
-  content: "✓"; position: absolute; left: 0; top: 0;
-  color: var(--acento); font-weight: 700;
+
+.cuenco{
+  margin-bottom: 20px;
 }
 
 /* ---- Nota “pedidos por mayor” ---- */
-.ficha__nota{ margin: 12px 0 20px; color: var(--text); }
+.ficha__nota{ margin: 70px 0 20px; color: var(--text); }
 
 
-/* ---- Franja inferior con paletas ---- */
-.ficha__franja{
-  margin-top: 18px;
-  background: rgba(255,255,255,.08);
-  border-top: 1px solid var(--borde-suave);
-  padding: 14px 18px;
-  display: grid; gap: 20px;
-}
-@media (min-width: 700px){
-  .ficha__franja{ grid-template-columns: 5fr 1fr; align-items: start;
-   }
+
+.fondo-esmaltes{
+  background-color: #e2d1b7;
 }
 
-.ficha__paleta ul{
-  list-style: none; 
-  margin: 6px 0 0; 
-  padding: 0;
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 12px 16px;
+
+.esmaltes{
+ 
+    /* si querés fila única con scroll horizontal */
+  display: flex;
+  justify-content: center;      /* centra el grupo */
+  gap: clamp(12px, 0.5vw, 24px); /* espacio entre fotos */
+  padding: 0 clamp(16px, 4vw, 48px);  /* respiración lateral */
+  margin: 0;
+  list-style: none;             /* saca viñetas y padding por defecto */
+transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+  cursor: pointer;             /* da sensación de interactivo */
+
 }
-.ficha__paleta li{
-  --size: 16px;
-  position: relative; padding-left: calc(var(--size) + 10px);
-  color: var(--muted); font-size: .4rem;
+
+.esmaltes img {
+  height: 500px;  /* todas igual de altas */
+  width: auto;    /* respeta proporción */
+  display: block; /* evita espacio fantasma del inline */
+  object-fit: cover;
+  border-style: solid;
+  border-color: lch(83.21% 11.95 86.68 / 0.897);
+  border-width: 2px;
 }
-.ficha__paleta li::before{
-  content: ""; position: absolute; left: 0; top: 50%;
-  width: var(--size); height: var(--size); transform: translateY(-50%);
-  border-radius: 50%; background: var(--c, #888);
-  border: 1px solid rgba(255,255,255,.25);
+
+.esmaltes img:hover {
+  transform: scale(1.05);       /* se agranda apenas */
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25); /* sombra suave */
 }
-.ficha__label{
-  display: inline-block; color: var(--text);
-  font-size: .70rem; letter-spacing: .08em; text-transform: uppercase;
-  opacity: .9;
+
+ 
+
+.titulo-esmalte{
+  font-size: 2rem;
+    max-width: 100%;    /* ignora limitaciones del padre */
+
+  margin-top: 200px;
+  margin-bottom: 50px;
+  color: var(--text);
+  font-weight: 1000;
+  font-family: "mikea";
+  text-align: center;
 }
+
+/* ---- Depuración: resalta todos los elementos ---- */ /* dibuja un borde rojo alrededor de TODO */
+/* * {
+  outline: 1px solid red;  
+}
+/*
