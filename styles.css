@@ -236,6 +236,24 @@ body {
   display: block;
   text-align: center;
   width: auto;
+  
+}
+
+.info-arcilla{
+   display: flex;
+  text-align: left;
+  margin-top: 0;          /* antes estaba en auto */
+  margin-left: auto;      /* esto lo mantiene a la derecha */
+  margin-right: 0;
+  line-height: 0.8cm;
+  width: 700px;
+  align-self: flex-start; /* hace que suba al inicio */
+}
+
+.foto-barro{
+  display: flex;
+  margin: left;
+  max-width: 40%;
 }
 
 .colecciones{
@@ -416,7 +434,7 @@ transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
 }
 
 /* ---- Depuración: resalta todos los elementos ---- */ /* dibuja un borde rojo alrededor de TODO */
- *- {
+ * {
   outline: 1px solid red;  
 }
 
